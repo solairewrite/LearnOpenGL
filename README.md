@@ -1,6 +1,6 @@
 # LearnOpenGL  
-##学习书籍: 计算机图形学(第四版)  
-##VS2017+OpenGL环境配置:  
+##学习书籍: 计算机图形学(第四版)
+##VS2017+OpenGL环境配置:
 **一,下载GLUT包**  
 1,压缩包下的5个文件要分别配置3个目录  
 2,glut.h: D:\Software\VS2017\Community\VC\Tools\MSVC\14.16.27023\include\gl  
