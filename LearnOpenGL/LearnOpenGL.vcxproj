@@ -155,6 +155,7 @@
     <ClInclude Include="4.17-2-PieChart.h" />
     <ClInclude Include="4.17-1-Summary.h" />
     <ClInclude Include="4.17-3-DrawCurve.h" />
+    <ClInclude Include="5.x-GraphicAttribute.h" />
     <ClInclude Include="BaseMain.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Test.h" />
@@ -164,6 +165,7 @@
     <ClCompile Include="4.17-1-Summary.cpp" />
     <ClCompile Include="4.17-2-PieChart.cpp" />
     <ClCompile Include="4.17-3-DrawCurve.cpp" />
+    <ClCompile Include="5.x-GraphicAttribute.cpp" />
     <ClCompile Include="BaseMain.cpp" />
     <ClCompile Include="LearnOpenGL.cpp" />
     <ClCompile Include="pch.cpp">

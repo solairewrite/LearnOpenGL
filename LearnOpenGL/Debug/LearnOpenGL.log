@@ -1,5 +1,6 @@
-﻿  4.17-3-DrawCurve.cpp
-d:\learn\learnopengl\learnopengl\4.17-3-drawcurve.cpp(80): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-d:\learn\learnopengl\learnopengl\4.17-3-drawcurve.cpp(84): warning C4244: '=': conversion from 'GLfloat' to 'GLint', possible loss of data
-d:\learn\learnopengl\learnopengl\4.17-3-drawcurve.cpp(85): warning C4244: '=': conversion from 'GLfloat' to 'GLint', possible loss of data
+﻿  5.x-GraphicAttribute.cpp
+d:\learn\learnopengl\learnopengl\5.x-graphicattribute.cpp(48): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+d:\learn\learnopengl\learnopengl\5.x-graphicattribute.cpp(58): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+d:\learn\learnopengl\learnopengl\5.x-graphicattribute.cpp(61): warning C4244: 'argument': conversion from 'double' to 'GLint', possible loss of data
+d:\learn\learnopengl\learnopengl\5.x-graphicattribute.cpp(70): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
   LearnOpenGL.vcxproj -> D:\Learn\LearnOpenGL\Debug\LearnOpenGL.exe

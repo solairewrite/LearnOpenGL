@@ -25,6 +25,12 @@
     <Filter Include="Header Files\Chapter4">
       <UniqueIdentifier>{4d5e172d-e9e9-4749-9f06-127f3e3b5d5a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Chapter5">
+      <UniqueIdentifier>{3eea7ee5-9856-48cb-8476-186adfe2d8a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Chapter5">
+      <UniqueIdentifier>{b550338f-5081-4ae6-8fd6-4c79969f58ac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -47,6 +53,9 @@
     </ClInclude>
     <ClInclude Include="4.17-3-DrawCurve.h">
       <Filter>Header Files\Chapter4</Filter>
+    </ClInclude>
+    <ClInclude Include="5.x-GraphicAttribute.h">
+      <Filter>Header Files\Chapter5</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +82,9 @@
     </ClCompile>
     <ClCompile Include="4.17-3-DrawCurve.cpp">
       <Filter>Source Files\Chapter4</Filter>
+    </ClCompile>
+    <ClCompile Include="5.x-GraphicAttribute.cpp">
+      <Filter>Source Files\Chapter5</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

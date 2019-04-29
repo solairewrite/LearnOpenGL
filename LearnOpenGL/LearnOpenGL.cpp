@@ -10,6 +10,7 @@
 #include "4.17-1-Summary.h"
 #include "4.17-2-PieChart.h"
 #include "4.17-3-DrawCurve.h"
+#include "5.x-GraphicAttribute.h"
 
 using namespace std;
 
@@ -17,9 +18,9 @@ BaseMain* GetTestClass(string ClassName);
 
 int main(int argc, char * argv[])
 {
-	cout << "hello world!\n";
+	cout << "程序运行中" <<endl;
 
-	BaseMain* TestClass = GetTestClass("DrawCurve");
+	BaseMain* TestClass = GetTestClass("GraphicAttribute");
 
 	TestClass->MainFunc(argc, argv);
 }
@@ -45,6 +46,10 @@ BaseMain* GetTestClass(string ClassName)
 	if (ClassName == "DrawCurve")
 	{
 		return new DrawCurve();
+	}	
+	if (ClassName == "GraphicAttribute")
+	{
+		return new GraphicAttribute();
 	}
 	return nullptr;
 }

@@ -41,6 +41,7 @@ void Heaxpon::init()
 		glVertex2i(hexgonVertex.getx(), hexgonVertex.gety());
 	}
 	glEnd();
+
 	glEndList();
 
 }

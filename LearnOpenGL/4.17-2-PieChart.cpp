@@ -33,7 +33,7 @@ void PieChart::init()
 	GLdouble w = 400, h = 300;
 	glClearColor(1.0, 1.0, 1.0, 1.0);
 	glMatrixMode(GL_PROJECTION);
-	gluOrtho2D(0.0, w, 0, h);
+	gluOrtho2D(0, w, 0, h);
 }
 
 void PieChart::circleMidpoint(screenPt CircleCenter, GLfloat radius, GLint SegmentsNum /*= 128*/)
