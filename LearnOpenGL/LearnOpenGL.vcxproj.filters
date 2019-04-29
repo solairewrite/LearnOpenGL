@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Chapter4">
+      <UniqueIdentifier>{2b665ba6-0b23-441f-a271-47ad0f05ab4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Test">
+      <UniqueIdentifier>{22f86e69-356c-4e9f-add8-e98ada304b09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Test">
+      <UniqueIdentifier>{273d4d68-6f4c-4350-a21e-63b983f55cac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Chapter4">
+      <UniqueIdentifier>{4d5e172d-e9e9-4749-9f06-127f3e3b5d5a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseMain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="4.16-Hexapon.h">
+      <Filter>Header Files\Chapter4</Filter>
+    </ClInclude>
+    <ClInclude Include="4.17-1-Summary.h">
+      <Filter>Header Files\Chapter4</Filter>
+    </ClInclude>
+    <ClInclude Include="4.17-2-PieChart.h">
+      <Filter>Header Files\Chapter4</Filter>
+    </ClInclude>
+    <ClInclude Include="4.17-3-DrawCurve.h">
+      <Filter>Header Files\Chapter4</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LearnOpenGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test.cpp">
+      <Filter>Source Files\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="4.16-Hexagon.cpp">
+      <Filter>Source Files\Chapter4</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="4.17-1-Summary.cpp">
+      <Filter>Source Files\Chapter4</Filter>
+    </ClCompile>
+    <ClCompile Include="4.17-2-PieChart.cpp">
+      <Filter>Source Files\Chapter4</Filter>
+    </ClCompile>
+    <ClCompile Include="4.17-3-DrawCurve.cpp">
+      <Filter>Source Files\Chapter4</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
