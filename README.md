@@ -2,7 +2,7 @@
 ##学习书籍: 计算机图形学(第四版)
 ##VSCode免密上传Git
 修改.git->config文件
-url = https://<font color="#dd0000">username:password</font>@github.com/solairewrite/LearnOpenGL.git  
+url = https://(username:password)@github.com/solairewrite/LearnOpenGL.git  
 ##VS2017+OpenGL环境配置:
 **一,下载GLUT包**  
 1,压缩包下的5个文件要分别配置3个目录  
