@@ -35,5 +35,5 @@
 .vs/
 # VS产生的文件夹
 x64
-#Debug
-#packages
+Debug
+packages
