@@ -2,44 +2,43 @@
 #include "5.x-GraphicAttribute.h"
 #define _USE_MATH_DEFINES
 #include "math.h"
+#include <iostream>
 
-GraphicAttribute::GraphicAttribute()
+using namespace std;
+
+// 子类构造函数调用父类构造函数
+GraphicAttribute::GraphicAttribute() :BaseMain(800,1.333)
 {
-	winWidth = 600;
-	winHeight = 600;
+
 }
 
 void GraphicAttribute::MainFunc(int argc, char * argv[])
 {
-	GLint winX = 200;
-	GLint winY = 200;
-
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB); // 单个帧缓存
-	glutInitWindowPosition(winX, winY);
-	glutInitWindowSize(winWidth, winHeight);
+	glutInitWindowPosition(InitWindowPosX, InitWindowPosY);
+	// glutInitWindowSize: 是显示窗口的大小
+	// gluOrtho2D: 被投影到显示窗口的区域,应该与显示窗口的宽高比相同
+	// 绘制的图形在gluOrtho2D显示,按照比例投影到glutInitWindowSize
+	glutInitWindowSize(WindowWidth, WindowHeight);
 	glutCreateWindow("第5章 图元的属性");
 
-	init();
-	glutDisplayFunc(DrawPoint);
-	//glutReshapeFunc(WindowReshape);
+	BaseInit();
+
+	int DrawWhatIndex = 1;
+	switch (DrawWhatIndex)
+	{
+	case 0: glutDisplayFunc(DrawPoint);	break;
+	case 1: glutDisplayFunc(DrawLine);	break;
+	default:							break;
+	}
+	
+	glutReshapeFunc(WindowReshape);
 
 	glutMainLoop();
 }
 
-// glutInitWindowSize: 是显示窗口的大小
-// gluOrtho2D: 被投影到显示窗口的区域,应该与显示窗口的宽高比相同
-// 绘制的图形在gluOrtho2D显示,按照比例投影到glutInitWindowSize
-void GraphicAttribute::init()
-{
-	GLdouble initWidth = 250;
-	GLdouble initHeight = 250;
-
-	glClearColor(1.0, 1.0, 1.0, 1.0);
-	glMatrixMode(GL_PROJECTION);
-	gluOrtho2D(0, initWidth, 0, initHeight);
-}
-
+// 绘制点
 void GraphicAttribute::DrawPoint()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -65,8 +64,86 @@ void GraphicAttribute::DrawPoint()
 	glFlush();
 }
 
+// 将Sin值投射到[0,1]
 GLfloat GraphicAttribute::SinPositive(GLfloat value)
 {
 	return sin(value) / 2 + 0.5;
+}
+
+// 绘制直线
+void GraphicAttribute::DrawLine()
+{
+	Point dataPts[5] = {
+		Point(WindowWidth * 0.1f,WindowHeight * 0.5f),
+		Point(WindowWidth * 0.3f,WindowHeight * 0.7f),
+		Point(WindowWidth * 0.5f,WindowHeight * 0.5f),
+		Point(WindowWidth * 0.7f,WindowHeight * 0.3f),
+		Point(WindowWidth * 0.9f,WindowHeight * 0.5f)
+	};
+
+	// 激活线型特性
+	glEnable(GL_LINE_STIPPLE);
+	{
+		// 坐标轴
+		glLineWidth(1.0); // 必须在glBegin外
+		glBegin(GL_LINES);
+		{
+			glColor3f(0, 1, 0);
+			glVertex2f(WindowWidth * 0.1f, WindowHeight * 0.1f);
+			glVertex2f(WindowWidth * 0.9f, WindowHeight * 0.1f);
+			glColor3f(0, 0, 1);
+			glVertex2f(WindowWidth * 0.1f, WindowHeight * 0.1f);
+			glVertex2f(WindowWidth * 0.1f, WindowHeight * 0.9f);
+		}
+		glEnd();
+
+		// 渐变颜色
+		glShadeModel(GL_SMOOTH);
+		glLineWidth(5.0);
+		glBegin(GL_LINES);
+		{
+			glColor3f(1, 0, 0);
+			glVertex2i(WindowWidth * 0.1f, WindowHeight * 0.2f);
+
+			glColor3f(0, 0.5, 0.5);
+			glVertex2i(WindowWidth * 0.9f, WindowHeight * 0.2f);
+		}
+		glEnd();
+		// 设直线型, Stipple: 点画
+		glLineStipple(1, 0x1C47); // 点划线
+		glLineWidth(1.0);
+		glColor3f(1, 0, 0); // 默认白色导致半天以为没画出来
+		linePlot(dataPts, 5);
+
+		glLineStipple(1, 0x00FF); // 虚线
+		glLineWidth(2.0);
+		dataPts[1].Y = WindowHeight * 0.3f;
+		dataPts[3].Y = WindowHeight * 0.7f;
+		glColor3f(0, 1, 0);
+		linePlot(dataPts, 5);
+
+		glLineStipple(1, 0x0101); // 点点线
+		glLineWidth(10.0);
+		dataPts[1].Y = WindowHeight * 0.5f;
+		dataPts[3].Y = WindowHeight * 0.5f;
+		glColor3f(0, 0, 1);
+		linePlot(dataPts, 5);
+	}
+	glDisable(GL_LINE_STIPPLE);
+}
+
+// 传入定点数组,绘制折线
+void GraphicAttribute::linePlot(Point points[], GLint ArrayLength)
+{
+	glBegin(GL_LINE_STRIP);
+	{
+		for (int i = 0; i < ArrayLength; i++)
+		{
+			glVertex2f(points[i].X, points[i].Y);
+		}
+	}
+	glEnd();
+
+	glFlush(); // 必须在glEnd后面
 }
 

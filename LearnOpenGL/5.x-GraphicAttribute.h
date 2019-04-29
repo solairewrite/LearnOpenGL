@@ -10,11 +10,10 @@ public:
 	virtual void MainFunc(int argc, char * argv[]) override;
 
 private:
-	GLsizei winWidth;
-	GLsizei winHeight;
 
-private:
-	void init();
 	static void DrawPoint();
 	static inline GLfloat SinPositive(GLfloat value);
+
+	static void DrawLine();
+	static void linePlot(Point points[],GLint ArrayLength); // »æÖÆ
 };
