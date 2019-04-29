@@ -1,4 +1,4 @@
-# Prerequisites
+﻿# Prerequisites
 *.d
 
 # Compiled Object files
@@ -33,3 +33,6 @@
 
 # Visual Studio 
 .vs/
+# VS产生的文件夹
+x64
+
