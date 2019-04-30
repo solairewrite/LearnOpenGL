@@ -18,5 +18,5 @@ url = https://[username:password]@github.com/solairewrite/LearnOpenGL.git
 需要管理NuGet程序包,重装两个nupengl文件  
 ##忽略文件  
 经测试,Debug文件夹和LearnOpenGL/Debug文件夹可以忽略,直接删除后,再次调试会自动生成  
-##md
+##md  
 双空格换行,#文字加大,#越多文字越小,4个*之间的文字加粗  
