@@ -1,4 +1,4 @@
-# LearnOpenGL>
+﻿# LearnOpenGL>
 ## 学习书籍: 计算机图形学(第四版)
 ## VSCode免密上传Git
 修改.git->config文件  
@@ -19,4 +19,4 @@ url = https://[username:password]@github.com/solairewrite/LearnOpenGL.git
 ## 忽略文件
 经测试,Debug文件夹和LearnOpenGL/Debug文件夹可以忽略,直接删除后,再次调试会自动生成  
 ## md
-双空格换行,#文字加大,#越多文字越小,4个*之间的文字加粗  
+双空格换行. #文字加大(标题级别),#越多文字越小,#后有一个空格. 4个*之间的文字加粗  
