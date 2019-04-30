@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Chapter5">
       <UniqueIdentifier>{b550338f-5081-4ae6-8fd6-4c79969f58ac}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Chapter6">
+      <UniqueIdentifier>{92a265df-6096-4077-afa9-56838a1ef1f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Chapter6">
+      <UniqueIdentifier>{1f6ac409-12ab-4fd6-8393-77b922dd9423}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -56,6 +62,9 @@
     </ClInclude>
     <ClInclude Include="5.x-GraphicAttribute.h">
       <Filter>Header Files\Chapter5</Filter>
+    </ClInclude>
+    <ClInclude Include="6.x-GraphicAlgorithm.h">
+      <Filter>Header Files\Chapter6</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +94,9 @@
     </ClCompile>
     <ClCompile Include="5.x-GraphicAttribute.cpp">
       <Filter>Source Files\Chapter5</Filter>
+    </ClCompile>
+    <ClCompile Include="6.x-GraphicAlgorithm.cpp">
+      <Filter>Source Files\Chapter6</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

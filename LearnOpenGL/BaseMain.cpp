@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "pch.h"
 #include "BaseMain.h"
 
@@ -23,12 +23,15 @@ BaseMain::BaseMain(GLint windowWidth, GLfloat aspectRatio)
 
 void BaseMain::MainFunc(int argc, char * argv[])
 {
-
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+	glutInitWindowPosition(InitWindowPosX, InitWindowPosY);
+	glutInitWindowSize(WindowWidth, WindowHeight);
 }
 
-// glutInitWindowSize: ÊÇÏÔÊ¾´°¿ÚµÄ´óĞ¡
-// gluOrtho2D: ±»Í¶Ó°µ½ÏÔÊ¾´°¿ÚµÄÇøÓò,Ó¦¸ÃÓëÏÔÊ¾´°¿ÚµÄ¿í¸ß±ÈÏàÍ¬
-// »æÖÆµÄÍ¼ĞÎÔÚgluOrtho2DÏÔÊ¾,°´ÕÕ±ÈÀıÍ¶Ó°µ½glutInitWindowSize
+// glutInitWindowSize: æ˜¯æ˜¾ç¤ºçª—å£çš„å¤§å°
+// gluOrtho2D: è¢«æŠ•å½±åˆ°æ˜¾ç¤ºçª—å£çš„åŒºåŸŸ,åº”è¯¥ä¸æ˜¾ç¤ºçª—å£çš„å®½é«˜æ¯”ç›¸åŒ
+// ç»˜åˆ¶çš„å›¾å½¢åœ¨gluOrtho2Dæ˜¾ç¤º,æŒ‰ç…§æ¯”ä¾‹æŠ•å½±åˆ°glutInitWindowSize
 void BaseMain::BaseInit(GLclampf R /*= 1.0f*/, GLclampf G /*= 1.0f*/, GLclampf B /*= 1.0f*/, GLclampf A /*= 1.0f*/)
 {
 	glClearColor(R, G, B, A);

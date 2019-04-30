@@ -1,8 +1,8 @@
-#pragma once
+ï»¿#pragma once
 #include "GL/glut.h"
 
 /**
- * Ìá¹©»æÍ¼½Ó¿Ú
+ * æä¾›ç»˜å›¾æ¥å£
  */
 class BaseMain
 {
@@ -13,12 +13,12 @@ public:
 	virtual void MainFunc(int argc, char * argv[]);
 
 protected:
-	static GLint WindowWidth;		// Êä³ö´°¿Ú¿í¶È
-	static GLint WindowHeight;		// Êä³ö´°¿Ú¸ß¶È
-	static GLfloat AspectRatio;	// Êä³ö´°¿Ú¿í¸ß±È
+	static GLint WindowWidth;		// è¾“å‡ºçª—å£å®½åº¦
+	static GLint WindowHeight;		// è¾“å‡ºçª—å£é«˜åº¦
+	static GLfloat AspectRatio;	// è¾“å‡ºçª—å£å®½é«˜æ¯”
 
-	GLint InitWindowPosX;	// Êä³ö´°¿Ú³õÊ¼Î»ÖÃ
-	GLint InitWindowPosY;	// Êä³ö´°¿Ú³õÊ¼Î»ÖÃ
+	GLint InitWindowPosX;	// è¾“å‡ºçª—å£åˆå§‹ä½ç½®
+	GLint InitWindowPosY;	// è¾“å‡ºçª—å£åˆå§‹ä½ç½®
 
 protected:
 	virtual void BaseInit(GLclampf R = 1.0f, GLclampf G = 1.0f, GLclampf B = 1.0f, GLclampf A = 1.0f);

@@ -16,6 +16,7 @@ url = https://[username:password]@github.com/solairewrite/LearnOpenGL.git
 ## 各种错误解决  
 在不同的电脑VS上打开后,编译可能不通过  
 需要管理NuGet程序包,重装两个nupengl文件  
+新建的文件如果忘记加上.cpp后缀,需要删除,重新创建  
 ## 忽略文件
 经测试,Debug文件夹和LearnOpenGL/Debug文件夹可以忽略,直接删除后,再次调试会自动生成  
 ## md

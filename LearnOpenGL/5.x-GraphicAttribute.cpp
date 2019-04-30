@@ -1,4 +1,4 @@
-#include "pch.h"
+ï»¿#include "pch.h"
 #include "5.x-GraphicAttribute.h"
 #define _USE_MATH_DEFINES
 #include "math.h"
@@ -6,8 +6,8 @@
 
 using namespace std;
 
-// ×ÓÀà¹¹Ôìº¯Êıµ÷ÓÃ¸¸Àà¹¹Ôìº¯Êı
-GraphicAttribute::GraphicAttribute() :BaseMain(800,1.333)
+// å­ç±»æ„é€ å‡½æ•°è°ƒç”¨çˆ¶ç±»æ„é€ å‡½æ•°
+GraphicAttribute::GraphicAttribute() :BaseMain(800, 1.333)
 {
 
 }
@@ -15,13 +15,13 @@ GraphicAttribute::GraphicAttribute() :BaseMain(800,1.333)
 void GraphicAttribute::MainFunc(int argc, char * argv[])
 {
 	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB); // µ¥¸öÖ¡»º´æ
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB); // å•ä¸ªå¸§ç¼“å­˜
 	glutInitWindowPosition(InitWindowPosX, InitWindowPosY);
-	// glutInitWindowSize: ÊÇÏÔÊ¾´°¿ÚµÄ´óĞ¡
-	// gluOrtho2D: ±»Í¶Ó°µ½ÏÔÊ¾´°¿ÚµÄÇøÓò,Ó¦¸ÃÓëÏÔÊ¾´°¿ÚµÄ¿í¸ß±ÈÏàÍ¬
-	// »æÖÆµÄÍ¼ĞÎÔÚgluOrtho2DÏÔÊ¾,°´ÕÕ±ÈÀıÍ¶Ó°µ½glutInitWindowSize
+	// glutInitWindowSize: æ˜¯æ˜¾ç¤ºçª—å£çš„å¤§å°
+	// gluOrtho2D: è¢«æŠ•å½±åˆ°æ˜¾ç¤ºçª—å£çš„åŒºåŸŸ,åº”è¯¥ä¸æ˜¾ç¤ºçª—å£çš„å®½é«˜æ¯”ç›¸åŒ
+	// ç»˜åˆ¶çš„å›¾å½¢åœ¨gluOrtho2Dæ˜¾ç¤º,æŒ‰ç…§æ¯”ä¾‹æŠ•å½±åˆ°glutInitWindowSize
 	glutInitWindowSize(WindowWidth, WindowHeight);
-	glutCreateWindow("µÚ5ÕÂ Í¼ÔªµÄÊôĞÔ");
+	glutCreateWindow("ç¬¬5ç«  å›¾å…ƒçš„å±æ€§");
 
 	BaseInit();
 
@@ -40,7 +40,7 @@ void GraphicAttribute::MainFunc(int argc, char * argv[])
 	glutMainLoop();
 }
 
-// »æÖÆµã
+// ç»˜åˆ¶ç‚¹
 void GraphicAttribute::DrawPoint()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -57,7 +57,7 @@ void GraphicAttribute::DrawPoint()
 	{
 		Angle = i * theta;
 		glColor3f(SinPositive(Angle), SinPositive(Angle+M_PI_2), SinPositive(Angle+M_PI));
-		glPointSize(PointMinSize + PointMaxSize * SinPositive(Angle)); // ĞèÒªÔÚglBeginÍâ²¿²ÅÄÜÉúĞ§
+		glPointSize(PointMinSize + PointMaxSize * SinPositive(Angle)); // éœ€è¦åœ¨glBeginå¤–éƒ¨æ‰èƒ½ç”Ÿæ•ˆ
 		glBegin(GL_POINTS);
 		glVertex2i(CenterX + Radius * cos(Angle), CenterX + Radius * sin(Angle));
 		glEnd();
@@ -66,13 +66,13 @@ void GraphicAttribute::DrawPoint()
 	glFlush();
 }
 
-// ½«SinÖµÍ¶Éäµ½[0,1]
+// å°†Sinå€¼æŠ•å°„åˆ°[0,1]
 GLfloat GraphicAttribute::SinPositive(GLfloat value)
 {
 	return sin(value) / 2 + 0.5;
 }
 
-// »æÖÆÖ±Ïß
+// ç»˜åˆ¶ç›´çº¿
 void GraphicAttribute::DrawLine()
 {
 	Point dataPts[5] = {
@@ -83,11 +83,11 @@ void GraphicAttribute::DrawLine()
 		Point(WindowWidth * 0.9f,WindowHeight * 0.5f)
 	};
 
-	// ¼¤»îÏßĞÍÌØĞÔ
+	// æ¿€æ´»çº¿å‹ç‰¹æ€§
 	glEnable(GL_LINE_STIPPLE);
 	{
-		// ×ø±êÖá
-		glLineWidth(1.0); // ±ØĞëÔÚglBeginÍâ
+		// åæ ‡è½´
+		glLineWidth(1.0); // å¿…é¡»åœ¨glBeginå¤–
 		glBegin(GL_LINES);
 		{
 			glColor3f(0, 1, 0);
@@ -99,7 +99,7 @@ void GraphicAttribute::DrawLine()
 		}
 		glEnd();
 
-		// ½¥±äÑÕÉ«
+		// æ¸å˜é¢œè‰²
 		glShadeModel(GL_SMOOTH);
 		glLineWidth(5.0);
 		glBegin(GL_LINES);
@@ -111,20 +111,20 @@ void GraphicAttribute::DrawLine()
 			glVertex2i(WindowWidth * 0.9f, WindowHeight * 0.2f);
 		}
 		glEnd();
-		// ÉèÖ±ÏßĞÍ, Stipple: µã»­
-		glLineStipple(1, 0x1C47); // µã»®Ïß
+		// è®¾ç›´çº¿å‹, Stipple: ç‚¹ç”»
+		glLineStipple(1, 0x1C47); // ç‚¹åˆ’çº¿
 		glLineWidth(1.0);
-		glColor3f(1, 0, 0); // Ä¬ÈÏ°×É«µ¼ÖÂ°ëÌìÒÔÎªÃ»»­³öÀ´
+		glColor3f(1, 0, 0); // é»˜è®¤ç™½è‰²å¯¼è‡´åŠå¤©ä»¥ä¸ºæ²¡ç”»å‡ºæ¥
 		linePlot(dataPts, 5);
 
-		glLineStipple(1, 0x00FF); // ĞéÏß
+		glLineStipple(1, 0x00FF); // è™šçº¿
 		glLineWidth(2.0);
 		dataPts[1].Y = WindowHeight * 0.3f;
 		dataPts[3].Y = WindowHeight * 0.7f;
 		glColor3f(0, 1, 0);
 		linePlot(dataPts, 5);
 
-		glLineStipple(1, 0x0101); // µãµãÏß
+		glLineStipple(1, 0x0101); // ç‚¹ç‚¹çº¿
 		glLineWidth(10.0);
 		dataPts[1].Y = WindowHeight * 0.5f;
 		dataPts[3].Y = WindowHeight * 0.5f;
@@ -134,7 +134,7 @@ void GraphicAttribute::DrawLine()
 	glDisable(GL_LINE_STIPPLE);
 }
 
-// ´«Èë¶¨µãÊı×é,»æÖÆÕÛÏß
+// ä¼ å…¥å®šç‚¹æ•°ç»„,ç»˜åˆ¶æŠ˜çº¿
 void GraphicAttribute::linePlot(Point points[], GLint ArrayLength)
 {
 	glBegin(GL_LINE_STRIP);
@@ -146,10 +146,10 @@ void GraphicAttribute::linePlot(Point points[], GLint ArrayLength)
 	}
 	glEnd();
 
-	glFlush(); // ±ØĞëÔÚglEndºóÃæ
+	glFlush(); // å¿…é¡»åœ¨glEndåé¢
 }
 
-// »æÖÆÈı½ÇĞÎ,Ê¹ÓÃÎÆÀíºÍ²îÖµÌî³ä
+// ç»˜åˆ¶ä¸‰è§’å½¢,ä½¿ç”¨çº¹ç†å’Œå·®å€¼å¡«å……
 void GraphicAttribute::DrawInterpTexture()
 {
 	glShadeModel(GL_SMOOTH);
@@ -165,8 +165,8 @@ void GraphicAttribute::DrawInterpTexture()
 	}
 	glEnd();
 
-	// ½ö»æÖÆ±ß¿ò,»æÖÆ±ß¿òÒªµ¥¶ÀÉèÖÃ
-	glPolygonMode(GL_FRONT, GL_LINE); // Òª·ÅÔÚglBeginÍâÃæ
+	// ä»…ç»˜åˆ¶è¾¹æ¡†,ç»˜åˆ¶è¾¹æ¡†è¦å•ç‹¬è®¾ç½®
+	glPolygonMode(GL_FRONT, GL_LINE); // è¦æ”¾åœ¨glBeginå¤–é¢
 	glBegin(GL_TRIANGLES);
 	{
 		glColor3f(0, 0, 0);
@@ -184,17 +184,17 @@ void GraphicAttribute::DrawBorder()
 	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
 	glColor3f(1, 0, 0);
-	// »æÖÆÖ¸¶¨±ß,GL_TRUEÎªÄ¬ÈÏÖµ
-	// GL_FALSEºóÃæµÄµã(A),ÒÔAÎªÆğµãµÄ±ß²»»æÖÆ
-	// Ö±µ½ÖØĞÂÉèÎªGL_TRUEºóÃæµÄµã(B),ÒÔBÎªÆğµã,ÔÙ´Î¿ªÊ¼»æÖÆ
+	// ç»˜åˆ¶æŒ‡å®šè¾¹,GL_TRUEä¸ºé»˜è®¤å€¼
+	// GL_FALSEåé¢çš„ç‚¹(A),ä»¥Aä¸ºèµ·ç‚¹çš„è¾¹ä¸ç»˜åˆ¶
+	// ç›´åˆ°é‡æ–°è®¾ä¸ºGL_TRUEåé¢çš„ç‚¹(B),ä»¥Bä¸ºèµ·ç‚¹,å†æ¬¡å¼€å§‹ç»˜åˆ¶
 	glBegin(GL_POLYGON);
 	{
 		glVertex2i(50, 50);
 		glVertex2i(250, 50);
 		glEdgeFlag(GL_FALSE);
-		glVertex2i(250, 250); // µã(A)
+		glVertex2i(250, 250); // ç‚¹(A)
 		glEdgeFlag(GL_TRUE);
-		glVertex2i(50, 250); // µã(B)
+		glVertex2i(50, 250); // ç‚¹(B)
 	}
 	glEnd();
 
