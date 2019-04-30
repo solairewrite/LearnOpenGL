@@ -1,4 +1,4 @@
-﻿# LearnOpenGL  
+# LearnOpenGL
 ##学习书籍: 计算机图形学(第四版)  
 ##VSCode免密上传Git  
 修改.git->config文件  
