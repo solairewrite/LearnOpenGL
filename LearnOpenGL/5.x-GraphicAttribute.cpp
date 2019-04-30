@@ -25,12 +25,14 @@ void GraphicAttribute::MainFunc(int argc, char * argv[])
 
 	BaseInit();
 
-	int DrawWhatIndex = 1;
+	int DrawWhatIndex = 3;
 	switch (DrawWhatIndex)
 	{
-	case 0: glutDisplayFunc(DrawPoint);	break;
-	case 1: glutDisplayFunc(DrawLine);	break;
-	default:							break;
+	case 0: glutDisplayFunc(DrawPoint);			break;
+	case 1: glutDisplayFunc(DrawLine);			break;
+	case 2: glutDisplayFunc(DrawInterpTexture);	break;
+	case 3: glutDisplayFunc(DrawBorder);		break;
+	default:									break;
 	}
 	
 	glutReshapeFunc(WindowReshape);
@@ -145,5 +147,57 @@ void GraphicAttribute::linePlot(Point points[], GLint ArrayLength)
 	glEnd();
 
 	glFlush(); // 必须在glEnd后面
+}
+
+// 绘制三角形,使用纹理和差值填充
+void GraphicAttribute::DrawInterpTexture()
+{
+	glShadeModel(GL_SMOOTH);
+
+	glBegin(GL_TRIANGLES); 
+	{
+		glColor3f(0, 0, 1);
+		glVertex2i(50, 50);
+		glColor3f(1, 0, 0);
+		glVertex2i(750, 50);
+		glColor3f(0, 1, 0);
+		glVertex2i(75, 550);
+	}
+	glEnd();
+
+	// 仅绘制边框,绘制边框要单独设置
+	glPolygonMode(GL_FRONT, GL_LINE); // 要放在glBegin外面
+	glBegin(GL_TRIANGLES);
+	{
+		glColor3f(0, 0, 0);
+		glVertex2i(50, 50);
+		glVertex2i(750, 50);
+		glVertex2i(75, 550);
+	}
+	glEnd();
+
+	glFlush();
+}
+
+void GraphicAttribute::DrawBorder()
+{
+	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
+	glColor3f(1, 0, 0);
+	// 绘制指定边,GL_TRUE为默认值
+	// GL_FALSE后面的点(A),以A为起点的边不绘制
+	// 直到重新设为GL_TRUE后面的点(B),以B为起点,再次开始绘制
+	glBegin(GL_POLYGON);
+	{
+		glVertex2i(50, 50);
+		glVertex2i(250, 50);
+		glEdgeFlag(GL_FALSE);
+		glVertex2i(250, 250); // 点(A)
+		glEdgeFlag(GL_TRUE);
+		glVertex2i(50, 250); // 点(B)
+	}
+	glEnd();
+
+	glFlush();
 }
 

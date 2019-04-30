@@ -16,4 +16,8 @@ private:
 
 	static void DrawLine();
 	static void linePlot(Point points[],GLint ArrayLength); // 绘制
+
+	static void DrawInterpTexture(); // 绘制纹理差值三角形
+
+	static void DrawBorder(); // 绘制线框图
 };

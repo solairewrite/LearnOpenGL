@@ -31,6 +31,8 @@
 *.out
 *.app
 
+# VSCode
+.vscode/
 # Visual Studio 
 .vs/
 # VS产生的文件夹
