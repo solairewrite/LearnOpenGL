@@ -1,6 +1,6 @@
 # LearnOpenGL
-##学习书籍: 计算机图形学(第四版)  
-##VSCode免密上传Git  
+##学习书籍: 计算机图形学(第四版)
+##VSCode免密上传Git
 修改.git->config文件  
 url = https://[username:password]@github.com/solairewrite/LearnOpenGL.git  
 ##VS2017+OpenGL环境配置:  
