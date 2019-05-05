@@ -20,6 +20,8 @@ protected:
 	GLint InitWindowPosX;	// 输出窗口初始位置
 	GLint InitWindowPosY;	// 输出窗口初始位置
 
+	static const GLdouble PI;
+
 protected:
 	virtual void BaseInit(GLclampf R = 1.0f, GLclampf G = 1.0f, GLclampf B = 1.0f, GLclampf A = 1.0f);
 
@@ -30,7 +32,19 @@ protected:
 typedef struct Point
 {
 	GLfloat X, Y;
+
+	Point()
+	{
+
+	}
+
 	Point(GLfloat x, GLfloat y)
+	{
+		X = x;
+		Y = y;
+	}
+
+	void SetXY(GLfloat x, GLfloat y)
 	{
 		X = x;
 		Y = y;

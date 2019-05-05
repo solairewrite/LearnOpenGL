@@ -6,6 +6,9 @@ GLint BaseMain::WindowWidth = 800;
 GLfloat BaseMain::AspectRatio = 1.0f;
 GLint BaseMain::WindowHeight = BaseMain::WindowWidth / BaseMain::AspectRatio;
 
+// 静态常量初始化
+const GLdouble BaseMain::PI = 3.14159;
+
 BaseMain::BaseMain()
 {
 

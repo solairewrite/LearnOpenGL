@@ -12,6 +12,7 @@
 #include "4.17-3-DrawCurve.h"
 #include "5.x-GraphicAttribute.h"
 #include "6.x-GraphicAlgorithm.h"
+#include "7.x-2D_GeometricTransformation.h"
 
 enum TestClass
 {
@@ -22,20 +23,22 @@ enum TestClass
 	Class_DrawCurve,
 	Class_GraphicAttribute,
 	Class_GraphicAlgorithm,
+	Class_GeometricTransformation_2D,
 };
 
 BaseMain* GetTestClass(TestClass inClass)
 {
 	switch (inClass)
 	{
-	case Class_Test:				return new Test();					break;
-	case Class_Heaxpon:				return new Heaxpon();				break;
-	case Class_Summary:				return new Summary();				break;
-	case Class_PieChart:			return new PieChart();				break;
-	case Class_DrawCurve:			return new DrawCurve();				break;
-	case Class_GraphicAttribute:	return new GraphicAttribute();		break;
-	case Class_GraphicAlgorithm:	return new GraphicAlgorithm();		break;
-	default:						return nullptr;						break;
+	case Class_Test:						return new Test();							break;
+	case Class_Heaxpon:						return new Heaxpon();						break;
+	case Class_Summary:						return new Summary();						break;
+	case Class_PieChart:					return new PieChart();						break;
+	case Class_DrawCurve:					return new DrawCurve();						break;
+	case Class_GraphicAttribute:			return new GraphicAttribute();				break;
+	case Class_GraphicAlgorithm:			return new GraphicAlgorithm();				break;
+	case Class_GeometricTransformation_2D:	return new GeometricTransformation_2D();	break;
+	default:								return nullptr;								break;
 	}
 }
 
@@ -44,7 +47,7 @@ int main(int argc, char * argv[])
 	using namespace std;
 	cout << "程序运行中" <<endl;
 
-	BaseMain* TestClass = GetTestClass(Class_GraphicAlgorithm);
+	BaseMain* TestClass = GetTestClass(Class_GeometricTransformation_2D);
 
 	TestClass->MainFunc(argc, argv);
 }
