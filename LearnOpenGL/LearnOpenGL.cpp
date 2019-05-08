@@ -13,6 +13,8 @@
 #include "5.x-GraphicAttribute.h"
 #include "6.x-GraphicAlgorithm.h"
 #include "7.x-2D_GeometricTransformation.h"
+#include "8.x-2D_Viewing.h"
+#include "10.x_3D_Viewing.h"
 
 enum TestClass
 {
@@ -24,6 +26,8 @@ enum TestClass
 	Class_GraphicAttribute,
 	Class_GraphicAlgorithm,
 	Class_GeometricTransformation_2D,
+	Class_Viewing_2D,
+	Class_Viewing_3D,
 };
 
 BaseMain* GetTestClass(TestClass inClass)
@@ -38,6 +42,8 @@ BaseMain* GetTestClass(TestClass inClass)
 	case Class_GraphicAttribute:			return new GraphicAttribute();				break;
 	case Class_GraphicAlgorithm:			return new GraphicAlgorithm();				break;
 	case Class_GeometricTransformation_2D:	return new GeometricTransformation_2D();	break;
+	case Class_Viewing_2D:					return new Viewing_2D();					break;
+	case Class_Viewing_3D:					return new Viewing_3D();					break;
 	default:								return nullptr;								break;
 	}
 }
@@ -47,7 +53,7 @@ int main(int argc, char * argv[])
 	using namespace std;
 	cout << "程序运行中" <<endl;
 
-	BaseMain* TestClass = GetTestClass(Class_GeometricTransformation_2D);
+	BaseMain* TestClass = GetTestClass(Class_Viewing_3D);
 
 	TestClass->MainFunc(argc, argv);
 }

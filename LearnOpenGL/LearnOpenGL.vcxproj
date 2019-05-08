@@ -158,11 +158,14 @@
     <ClInclude Include="5.x-GraphicAttribute.h" />
     <ClInclude Include="6.x-GraphicAlgorithm.h" />
     <ClInclude Include="7.x-2D_GeometricTransformation.h" />
+    <ClInclude Include="8.x-2D_Viewing.h" />
+    <ClInclude Include="10.x_3D_Viewing.h" />
     <ClInclude Include="BaseMain.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Test.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="10.x_3D_Viewing.cpp" />
     <ClCompile Include="4.16-Hexagon.cpp" />
     <ClCompile Include="4.17-1-Summary.cpp" />
     <ClCompile Include="4.17-2-PieChart.cpp" />
@@ -170,6 +173,7 @@
     <ClCompile Include="5.x-GraphicAttribute.cpp" />
     <ClCompile Include="6.x-GraphicAlgorithm.cpp" />
     <ClCompile Include="7.x-2D_GeometricTransformation.cpp" />
+    <ClCompile Include="8.x-2D_Viewing.cpp" />
     <ClCompile Include="BaseMain.cpp" />
     <ClCompile Include="LearnOpenGL.cpp" />
     <ClCompile Include="pch.cpp">

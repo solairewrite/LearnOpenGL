@@ -40,8 +40,20 @@
     <Filter Include="Header Files\Chapter7">
       <UniqueIdentifier>{bb83da0b-6718-4c5e-bb5d-f63112794acc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Chpater7">
+    <Filter Include="Header Files\Chapter8">
+      <UniqueIdentifier>{dc8b6e2b-9d7d-471e-a682-cd01080a2c80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Chapter10">
+      <UniqueIdentifier>{84454d8e-80e6-4199-9799-03f6892757a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Chapter10">
+      <UniqueIdentifier>{690e946d-2cc1-4f60-af3f-ec841a88f96a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Chapter7">
       <UniqueIdentifier>{b6c3e077-2880-4d06-a9a6-196bc8422899}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Chapter8">
+      <UniqueIdentifier>{bf4ca83f-a213-4d59-b0fa-7ec03801a71e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +86,12 @@
     </ClInclude>
     <ClInclude Include="7.x-2D_GeometricTransformation.h">
       <Filter>Header Files\Chapter7</Filter>
+    </ClInclude>
+    <ClInclude Include="8.x-2D_Viewing.h">
+      <Filter>Header Files\Chapter8</Filter>
+    </ClInclude>
+    <ClInclude Include="10.x_3D_Viewing.h">
+      <Filter>Header Files\Chapter10</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -108,7 +126,13 @@
       <Filter>Source Files\Chapter6</Filter>
     </ClCompile>
     <ClCompile Include="7.x-2D_GeometricTransformation.cpp">
-      <Filter>Source Files\Chpater7</Filter>
+      <Filter>Source Files\Chapter7</Filter>
+    </ClCompile>
+    <ClCompile Include="8.x-2D_Viewing.cpp">
+      <Filter>Source Files\Chapter8</Filter>
+    </ClCompile>
+    <ClCompile Include="10.x_3D_Viewing.cpp">
+      <Filter>Source Files\Chapter10</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
