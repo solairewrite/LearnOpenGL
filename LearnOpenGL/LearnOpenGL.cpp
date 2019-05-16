@@ -15,6 +15,9 @@
 #include "7.x-2D_GeometricTransformation.h"
 #include "8.x-2D_Viewing.h"
 #include "10.x_3D_Viewing.h"
+#include "12.x-Animation.h"
+#include "13.x-Present.h"
+#include "18.x-TextureAndSurface.h"
 
 enum TestClass
 {
@@ -28,6 +31,9 @@ enum TestClass
 	Class_GeometricTransformation_2D,
 	Class_Viewing_2D,
 	Class_Viewing_3D,
+	Class_Animation,
+	Class_Present,
+	Class_TextureAndSurface,
 };
 
 BaseMain* GetTestClass(TestClass inClass)
@@ -44,6 +50,9 @@ BaseMain* GetTestClass(TestClass inClass)
 	case Class_GeometricTransformation_2D:	return new GeometricTransformation_2D();	break;
 	case Class_Viewing_2D:					return new Viewing_2D();					break;
 	case Class_Viewing_3D:					return new Viewing_3D();					break;
+	case Class_Animation:					return new Animation();						break;
+	case Class_Present:						return new Present();						break;
+	case Class_TextureAndSurface:			return new TextureAndSurface();				break;
 	default:								return nullptr;								break;
 	}
 }
@@ -53,7 +62,7 @@ int main(int argc, char * argv[])
 	using namespace std;
 	cout << "程序运行中" <<endl;
 
-	BaseMain* TestClass = GetTestClass(Class_Viewing_3D);
+	BaseMain* TestClass = GetTestClass(Class_TextureAndSurface);
 
 	TestClass->MainFunc(argc, argv);
 }

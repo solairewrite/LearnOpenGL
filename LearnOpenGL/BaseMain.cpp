@@ -8,6 +8,7 @@ GLint BaseMain::WindowHeight = BaseMain::WindowWidth / BaseMain::AspectRatio;
 
 // 静态常量初始化
 const GLdouble BaseMain::PI = 3.14159;
+const GLdouble BaseMain::TWO_PI = 6.2831853;
 
 BaseMain::BaseMain()
 {
@@ -46,6 +47,6 @@ void BaseMain::WindowReshape(GLint newWidth, GLint newHeight)
 {
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluOrtho2D(0,newWidth, 0, newHeight);
+	gluOrtho2D(0, newWidth, 0, newHeight);
 	glClear(GL_COLOR_BUFFER_BIT);
 }

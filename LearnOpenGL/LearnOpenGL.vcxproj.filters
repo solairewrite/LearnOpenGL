@@ -55,6 +55,24 @@
     <Filter Include="Source Files\Chapter8">
       <UniqueIdentifier>{bf4ca83f-a213-4d59-b0fa-7ec03801a71e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Chapter12">
+      <UniqueIdentifier>{06986664-c912-47ff-bddb-56c0388f6879}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Chapter12">
+      <UniqueIdentifier>{f781740b-94d1-433a-b73f-3ba5e4a8830d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Chapter13">
+      <UniqueIdentifier>{67463549-586e-4e0c-ad2b-c7059d2a821d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Chapter13">
+      <UniqueIdentifier>{167e9bf4-4eb3-47c4-878a-ea37dc6b8b41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Chapter18">
+      <UniqueIdentifier>{79aa59b9-cd25-4b56-bd91-e571b314a8c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Chapter18">
+      <UniqueIdentifier>{59cf9b6c-0012-44f7-84b4-df5f4a7516fd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -92,6 +110,15 @@
     </ClInclude>
     <ClInclude Include="10.x_3D_Viewing.h">
       <Filter>Header Files\Chapter10</Filter>
+    </ClInclude>
+    <ClInclude Include="12.x-Animation.h">
+      <Filter>Header Files\Chapter12</Filter>
+    </ClInclude>
+    <ClInclude Include="13.x-Present.h">
+      <Filter>Header Files\Chapter13</Filter>
+    </ClInclude>
+    <ClInclude Include="18.x-TextureAndSurface.h">
+      <Filter>Header Files\Chapter18</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +160,15 @@
     </ClCompile>
     <ClCompile Include="10.x_3D_Viewing.cpp">
       <Filter>Source Files\Chapter10</Filter>
+    </ClCompile>
+    <ClCompile Include="12.x-Animation.cpp">
+      <Filter>Source Files\Chapter12</Filter>
+    </ClCompile>
+    <ClCompile Include="13.x-Present.cpp">
+      <Filter>Source Files\Chapter13</Filter>
+    </ClCompile>
+    <ClCompile Include="18.x-TextureAndSurface.cpp">
+      <Filter>Source Files\Chapter18</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

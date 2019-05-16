@@ -21,6 +21,7 @@ protected:
 	GLint InitWindowPosY;	// 输出窗口初始位置
 
 	static const GLdouble PI;
+	static const GLdouble TWO_PI;
 
 protected:
 	virtual void BaseInit(GLclampf R = 1.0f, GLclampf G = 1.0f, GLclampf B = 1.0f, GLclampf A = 1.0f);
