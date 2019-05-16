@@ -80,10 +80,33 @@ void TextureAndSurface::DrawTexture1D()
 	{
 		glBegin(GL_LINES);
 		{
-			glTexCoord1f(0.0);
-			glVertex2f(p1.X, p1.Y);
+			glTexCoord1f(0.0); // 纹理的起始位置
+			glVertex2f(p1.X, p1.Y); // 顶点的起始位置
 			glTexCoord1f(1.0);
 			glVertex2f(p2.X, p2.Y);
+		}
+		glEnd();
+	}
+
+	int Offset = 30;
+	glColor3f(1.0f, 0.5f, 0.0f);
+	glPointSize(10.0f);
+	glBegin(GL_POINTS);
+	{
+		glVertex2i(p1.X, p1.Y + Offset);
+		glVertex2i(p2.X, p2.Y + Offset);
+	}
+	glEnd();
+
+	glEnable(GL_TEXTURE_1D);
+	{
+		glLineWidth(3.0f);
+		glBegin(GL_LINES);
+		{
+			glTexCoord1f(0.25); // 纹理的起始位置
+			glVertex2f(p1.X, p1.Y + Offset); // 顶点的起始位置
+			glTexCoord1f(0.75);
+			glVertex2f(p2.X, p2.Y + Offset);
 		}
 		glEnd();
 	}
