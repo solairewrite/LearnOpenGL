@@ -18,6 +18,7 @@
 #include "12.x-Animation.h"
 #include "13.x-Present.h"
 #include "18.x-TextureAndSurface.h"
+#include "20.x-Interactive.h"
 
 enum TestClass
 {
@@ -34,6 +35,7 @@ enum TestClass
 	Class_Animation,
 	Class_Present,
 	Class_TextureAndSurface,
+	Class_Interactive,
 };
 
 BaseMain* GetTestClass(TestClass inClass)
@@ -53,6 +55,7 @@ BaseMain* GetTestClass(TestClass inClass)
 	case Class_Animation:					return new Animation();						break;
 	case Class_Present:						return new Present();						break;
 	case Class_TextureAndSurface:			return new TextureAndSurface();				break;
+	case Class_Interactive:					return new Interactive();					break;
 	default:								return nullptr;								break;
 	}
 }
@@ -62,7 +65,7 @@ int main(int argc, char * argv[])
 	using namespace std;
 	cout << "程序运行中" <<endl;
 
-	BaseMain* TestClass = GetTestClass(Class_TextureAndSurface);
+	BaseMain* TestClass = GetTestClass(Class_Interactive);
 
 	TestClass->MainFunc(argc, argv);
 }

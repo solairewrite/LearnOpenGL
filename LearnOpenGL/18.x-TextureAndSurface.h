@@ -12,6 +12,6 @@ private:
 
 	static void DrawTexture1D();
 
-private:
+	static void DrawTexture2D();
 
 };

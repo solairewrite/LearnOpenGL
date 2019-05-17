@@ -73,6 +73,12 @@
     <Filter Include="Source Files\Chapter18">
       <UniqueIdentifier>{59cf9b6c-0012-44f7-84b4-df5f4a7516fd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Chapter20">
+      <UniqueIdentifier>{b0d26fa3-c7f8-4756-9031-ad0e2fb0b083}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Chapter20">
+      <UniqueIdentifier>{4287205e-204a-4df1-9b36-857c769b4d0e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -119,6 +125,9 @@
     </ClInclude>
     <ClInclude Include="18.x-TextureAndSurface.h">
       <Filter>Header Files\Chapter18</Filter>
+    </ClInclude>
+    <ClInclude Include="20.x-Interactive.h">
+      <Filter>Header Files\Chapter20</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +178,9 @@
     </ClCompile>
     <ClCompile Include="18.x-TextureAndSurface.cpp">
       <Filter>Source Files\Chapter18</Filter>
+    </ClCompile>
+    <ClCompile Include="20.x-Interactive.cpp">
+      <Filter>Source Files\Chapter20</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

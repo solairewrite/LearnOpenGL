@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="12.x-Animation.h" />
     <ClInclude Include="13.x-Present.h" />
+    <ClInclude Include="20.x-Interactive.h" />
     <ClInclude Include="4.16-Hexapon.h" />
     <ClInclude Include="4.17-2-PieChart.h" />
     <ClInclude Include="4.17-1-Summary.h" />
@@ -172,6 +173,7 @@
     <ClCompile Include="12.x-Animation.cpp" />
     <ClCompile Include="13.x-Present.cpp" />
     <ClCompile Include="18.x-TextureAndSurface.cpp" />
+    <ClCompile Include="20.x-Interactive.cpp" />
     <ClCompile Include="4.16-Hexagon.cpp" />
     <ClCompile Include="4.17-1-Summary.cpp" />
     <ClCompile Include="4.17-2-PieChart.cpp" />
