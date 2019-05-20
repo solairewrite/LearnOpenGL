@@ -28,6 +28,8 @@ protected:
 
 	static void WindowReshape(GLint newWidth, GLint newHeight);
 
+	char* readTextFile(const char* name);
+
 };
 
 typedef struct Point

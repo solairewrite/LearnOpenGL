@@ -79,6 +79,12 @@
     <Filter Include="Source Files\Chapter20">
       <UniqueIdentifier>{4287205e-204a-4df1-9b36-857c769b4d0e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Chapter22">
+      <UniqueIdentifier>{0f57b455-3e07-4143-9da5-68fcf49a4ea0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Chapter22">
+      <UniqueIdentifier>{151d06d1-0a59-4533-8424-ee9ea207451d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -128,6 +134,9 @@
     </ClInclude>
     <ClInclude Include="20.x-Interactive.h">
       <Filter>Header Files\Chapter20</Filter>
+    </ClInclude>
+    <ClInclude Include="22.x-GL_Shader.h">
+      <Filter>Header Files\Chapter22</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -181,6 +190,9 @@
     </ClCompile>
     <ClCompile Include="20.x-Interactive.cpp">
       <Filter>Source Files\Chapter20</Filter>
+    </ClCompile>
+    <ClCompile Include="22.x-GL_Shader.cpp">
+      <Filter>Source Files\Chapter22</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

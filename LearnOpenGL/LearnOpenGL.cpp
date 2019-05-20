@@ -19,6 +19,7 @@
 #include "13.x-Present.h"
 #include "18.x-TextureAndSurface.h"
 #include "20.x-Interactive.h"
+#include "22.x-GL_Shader.h"
 
 enum TestClass
 {
@@ -36,6 +37,7 @@ enum TestClass
 	Class_Present,
 	Class_TextureAndSurface,
 	Class_Interactive,
+	Class_GLShader,
 };
 
 BaseMain* GetTestClass(TestClass inClass)
@@ -56,6 +58,7 @@ BaseMain* GetTestClass(TestClass inClass)
 	case Class_Present:						return new Present();						break;
 	case Class_TextureAndSurface:			return new TextureAndSurface();				break;
 	case Class_Interactive:					return new Interactive();					break;
+	case Class_GLShader:					return new GLShader();						break;
 	default:								return nullptr;								break;
 	}
 }
@@ -65,7 +68,7 @@ int main(int argc, char * argv[])
 	using namespace std;
 	cout << "程序运行中" <<endl;
 
-	BaseMain* TestClass = GetTestClass(Class_Interactive);
+	BaseMain* TestClass = GetTestClass(Class_GLShader);
 
 	TestClass->MainFunc(argc, argv);
 }

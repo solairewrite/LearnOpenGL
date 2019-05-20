@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "pch.h"
 #include "BaseMain.h"
+#include <stdio.h>
 
 GLint BaseMain::WindowWidth = 800;
 GLfloat BaseMain::AspectRatio = 1.0f;
@@ -49,4 +50,44 @@ void BaseMain::WindowReshape(GLint newWidth, GLint newHeight)
 	glLoadIdentity();
 	gluOrtho2D(0, newWidth, 0, newHeight);
 	glClear(GL_COLOR_BUFFER_BIT);
+}
+
+/**
+ * 读取文件内容,并将其写入动态分配的字符串缓存区
+ * 打开文件,并确定包含的字符总数.然后为字符串分配储存空间,再将文件内容存入该字符串
+ * 返回指向字符串缓冲区地址的指针
+ */
+char* BaseMain::readTextFile(const char* name)
+{
+	FILE* fp;
+	char* content = NULL;
+	int count = 0;
+
+	if (name = NULL)
+		return NULL;
+
+	// 尝试打开文件
+	fopen_s(&fp, name, "rt");
+	if (fp = NULL)
+		return NULL;
+
+	// 确定字符总数
+	fseek(fp, 0, SEEK_END);
+	count = ftell(fp);
+	rewind(fp);
+
+	// 分配缓存,写入文件
+	if (count > 0)
+	{
+		content = (char*)malloc(sizeof(char) * (count + 1));
+		if (count != NULL)
+		{
+			count = fread(content, sizeof(char), count, fp);
+			content[count] = '\0';
+		}
+	}
+
+	fclose(fp);
+
+	return content;
 }

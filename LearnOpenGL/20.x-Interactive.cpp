@@ -1,4 +1,5 @@
 ﻿#include "pch.h"
+#include <GL/glew.h>
 #include "20.x-Interactive.h"
 
 GLsizei Interactive::winWidth = 400;
@@ -48,6 +49,9 @@ void Interactive::init()
 
 	glMatrixMode(GL_PROJECTION);
 	gluOrtho2D(0.0, 200.0, 0.0, 150.0);
+
+	printf("OpenGL version: %s\n", (char*)glGetString(GL_VERSION));
+	printf("GLSL version: %s\n", (char*)glGetString(GL_SHADING_LANGUAGE_VERSION));
 }
 
 void Interactive::displayFcn()
